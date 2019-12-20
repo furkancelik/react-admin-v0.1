@@ -108,6 +108,23 @@ function SideBar({ location: { pathname } }) {
                 <p>Kategoriler</p>
               </NavLink>
             </li> */}
+
+            <li className="nav-item">
+              <Link
+                onClick={e => {
+                  e.preventDefault();
+                  localStorage.removeItem("TOKEN");
+                  window.location = "/";
+                }}
+                className={`nav-link`}>
+                <FontAwesomeIcon
+                  fixedWidth
+                  className={"nav-icon"}
+                  icon={["fas", "power-off"]}
+                />
+                <p>Çıkış Yap</p>
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

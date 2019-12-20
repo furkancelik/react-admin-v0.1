@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import { createBrowserHistory } from "history";
 
 import Dashboard from "./Dashboard";
@@ -11,6 +16,7 @@ import {
   ProductDetail,
   ProductEdit
 } from "./Product";
+import sessionWrapperHOC from "./sessionWrapperHOC";
 
 const history = createBrowserHistory();
 
@@ -18,6 +24,11 @@ function App() {
   return (
     <Router history={history}>
       <Switch>
+        {/* 
+        Eğer / dizini boş ise / adresini /dashboard yönlendirebilirsin!
+        <Route exact path="/">
+          <Redirect to={{ pathname: "/dashboard" }} />
+        </Route> */}
         <Route exact path="/" component={Dashboard} />
 
         {/*Product Page */}
@@ -32,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export default sessionWrapperHOC(App);

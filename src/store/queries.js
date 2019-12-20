@@ -52,18 +52,19 @@ export const PRODUCT = {
   `
 };
 
-// export const GET_ME = gql`
-//   {
-//     me {
-//       id
-//     }
-//   }
-// `;
+export const GET_ME = gql`
+  {
+    me {
+      fullName
+      username
+    }
+  }
+`;
 
-// export const LOGIN = gql`
-//   mutation($data: loginUserInput) {
-//     login(data: $data) {
-//       token
-//     }
-//   }
-// `;
+export const LOGIN = gql`
+  mutation($data: loginUserInput) {
+    login(data: $data) {
+      token
+    }
+  }
+`;

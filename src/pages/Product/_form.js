@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import FileEditor from "../../components/FileEditor";
 import Loading from "../../components/Loading";
 import _ from "lodash";
+import CKEditor from "ckeditor4-react";
 
 export default function ProductForm({
   link = "",
@@ -168,6 +169,18 @@ export default function ProductForm({
                   className="form-control"
                 />
               </div>
+            </div>
+          </div>
+
+          <div className="form-group row">
+            <label className="col-sm-2 control-label">İçerik</label>
+            <div className="col-sm-10">
+              <CKEditor
+                data={input.content}
+                onChange={e => {
+                  setInput({ ...input, content: e.editor.getData() });
+                }}
+              />
             </div>
           </div>
         </div>
