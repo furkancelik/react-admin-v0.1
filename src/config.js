@@ -1,5 +1,9 @@
 import axios from "axios";
-export const URL = "http://localhost:5000/";
+const URL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:5000/"
+    : "http://<SİTE_ADRESİ>.<COM>/";
+const endpointURL = "graphql";
 const endPoint = "graphql";
 
 export const API_URL = `${URL}${endPoint}`;
