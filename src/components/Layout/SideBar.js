@@ -8,15 +8,11 @@ function SideBar({ location: { pathname } }) {
 
   return (
     <aside className="main-sidebar sidebar-dark-primary elevation-4">
-      <a href="#link" className="brand-link">
-        <img
-          src="/AdminLTELogo.png"
-          alt="AdminLTE Logo"
-          className="brand-image img-circle elevation-3"
-          style={{ opacity: 0.8 }}
-        />
-        <span className="brand-text font-weight-light">YönetimPaneli</span>
-      </a>
+      <NavLink to="/" className="brand-link">
+        <span className="text-center d-block brand-text font-weight-light">
+          YönetimPaneli
+        </span>
+      </NavLink>
 
       <div className="sidebar">
         <nav className="mt-2">
@@ -93,6 +89,25 @@ function SideBar({ location: { pathname } }) {
                 <p>Stok</p>
               </NavLink>
             </li>
+
+            {/* <li className="nav-item">
+              <NavLink
+                to={"/admin/category"}
+                isActive={(_, { pathname }) => {
+                  return ["sub-category", "category"].includes(
+                    pathname.split("/")[2]
+                  );
+                }}
+                className={`nav-link`}
+                activeClassName="active">
+                <FontAwesomeIcon
+                  fixedWidth
+                  className={"nav-icon"}
+                  icon={["fas", "network-wired"]}
+                />
+                <p>Kategoriler</p>
+              </NavLink>
+            </li> */}
           </ul>
         </nav>
       </div>
