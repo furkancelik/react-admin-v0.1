@@ -1,10 +1,11 @@
 import React from "react";
 import Card, { CardBody, CardTitle } from "../../components/Layout/Card";
 import ContentHeader from "../../components/Layout/ContentHeader";
+import Layout from "../../components/Layout";
 
 export default function Dashboard() {
   return (
-    <>
+    <Layout>
       <ContentHeader
         title={"Dashboard"}
         breadCrumb={[
@@ -33,6 +34,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
