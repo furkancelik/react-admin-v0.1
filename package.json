@@ -10,7 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "admin-lte": "^3.0.1",
     "apollo-boost": "^0.4.3",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "ckeditor4-react": "^1.0.1",
     "graphql": "^14.4.2",
